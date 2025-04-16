@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #111;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #263238;
+    min-height: 500px;
+}
+
+.hero-content {
+    max-width: 500px;
+    color: #ff9800;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: 2px solid #ff9800;
+}
+
+.section {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.section img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    border: 2px solid #ff9800;
+    margin-bottom: 20px;
+}
+
+.services h2 {
+    color: #e65100;
+    margin: 30px;
+}
+
+.contato h2 {
+    color: #e65100;
+    margin: 30px;
+}
+
+.cta {
+    margin: 30px;
+}
+
+.services {
+    text-align: center;
+    background-color: #263238;
+}
+
+.services ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.services li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.contato button {
+    padding: 12px 20px;
+    background-color: #ff9800;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contato button:hover {
+    background-color: #e65100;
+}
+
+.cta {
+    background-color: #ff9800;
+    color: #111;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.btn-cta {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #111;
+    color: #ff9800;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #222;
+}
+
+footer {
+    background-color: #263238;
+    padding: 30px 20px;
+    text-align: center;
+    color: #aaa;
+}
+
+.socials img {
+    width: 54px;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff9800;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #111;
+    padding: 30px 20px;
+    border-radius: 16px;
+    border: 2px solid #ff9800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #ff9800;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Responsivo: layout lado a lado no desktop */
+@media (min-width: 768px) {
+    .cards-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1;
+        max-width: 300px;
+    }
+}
+
+
+/* Desktop ajustes */
+@media (min-width: 1024px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .hero-content {
+        flex: 1;
+        padding: 20px;
+        max-width: 600px;
+    }
+
+    .hero-img {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-img img {
+        max-width: 350px;
+        height: auto;
+    }
+
+    .section {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .section p {
+        max-width: 500px;
+        font-size: 1.1rem;
+        align-self: center;
+    }
+}
